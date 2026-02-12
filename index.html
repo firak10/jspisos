@@ -264,11 +264,11 @@
                 <div class="fade-up" style="transition-delay: 0.2s;">
                     <div class="ba-container h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden" data-ba="2">
                         <div class="ba-after img-placeholder w-full h-full">
-                            <span>DEPOIS<br>Piso Novo Instalado</span>
+                            <img src="images/depois2.webp">
                         </div>
                         <div class="ba-before img-placeholder w-full h-full"
                             style="background: linear-gradient(135deg, #6b4423 0%, #3d2614 100%);">
-                            <span>ANTES<br>Piso Antigo</span>
+                            <img src="images/antes2.webp">
                         </div>
                         <div class="ba-slider"></div>
                     </div>
@@ -488,24 +488,49 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-wood-900 py-12">
-        <div class="max-w-7xl mx-auto px-4">
+    <footer class="bg-wood-900 pt-12">
+        <div class="max-w-7xl mx-auto px-4 pb-10">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center"
                         style="min-width: 40px;">
                         <img src="images/logo.png" class="w-full h-full object-contain" alt="Logo JS Pisos">
                     </div>
-                    <span id="footer-company-name" class="font-display text-wax-400 text-lg font-bold">JS Pisos e
-                        Acabamentos</span>
+
+                    <span class="font-display text-wax-400 text-lg font-bold">
+                        JS Pisos e Acabamentos
+                    </span>
                 </div>
+
                 <div class="text-wood-400 text-sm text-center md:text-right">
-                    <p>© 2026 JS Pisos e Acabamentos. Todos os direitos reservados.</p>
+                    <p>
+                        © <span id="year"></span> JS Pisos e Acabamentos.
+                        Todos os direitos reservados.
+                    </p>
                     <p class="mt-1">Grande Florianópolis, SC</p>
                 </div>
+
+            </div>
+        </div>
+
+        <!-- Faixa Desenvolvedor -->
+        <div class="bg-gray-900 py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-400">
+                Desenvolvido por:
+                <a href="https://wa.me/55429999359359?text=Olá%20Lucas%2C%20vim%20pelo%20site%20JS%20Pisos"
+                    target="_blank" rel="noopener" class="text-white font-semibold hover:underline">
+                    Lucas Firak — 42 999 359 359
+                </a>
             </div>
         </div>
     </footer>
+
+    <!-- Ano dinâmico -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 
     <!-- Floating WhatsApp Button -->
     <a href="#" id="floating-whatsapp"
