@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pisos e Acabamentos</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+
+    <!-- SEO básico -->
+    <meta name="description"
+        content="Especialistas em pisos laminados, vinílicos, rodapés e restauração de assoalhos. Atendimento profissional com qualidade e acabamento impecável.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JS Pisos">
+
+    <!-- Open Graph (Facebook, Instagram, WhatsApp) -->
+    <meta property="og:title" content="JS Pisos | Pisos e Acabamentos Profissionais">
+    <meta property="og:description"
+        content="Transformamos seu ambiente com pisos de qualidade. Orçamento rápido e atendimento especializado.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firak10.github.io/jspisos.html">
+    <meta property="og:image" content="https://firak10.github.io/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter (Instagram também usa OG, mas é bom ter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JS Pisos | Pisos e Acabamentos">
+    <meta name="twitter:description"
+        content="Pisos laminados, vinílicos e restauração de assoalhos com acabamento profissional.">
+    <meta name="twitter:image" content="https://firak10.github.io/images/logo.png">
+
+    <!-- Cor do tema mobile -->
+    <meta name="color-scheme" content="only light">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            50: '#fdf8f3',
+                            100: '#f5ebe0',
+                            200: '#e6d5c3',
+                            300: '#d4b896',
+                            400: '#c19a6b',
+                            500: '#8b5a2b',
+                            600: '#6b4423',
+                            700: '#4a2f18',
+                            800: '#3d2614',
+                            900: '#2d1b0e'
+                        },
+                        wax: {
+                            50: '#fffef5',
+                            100: '#fefce8',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#d4a017',
+                            600: '#b8860b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="h-full bg-wood-50 overflow-auto">
+
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-wood-800/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo placeholder -->
+            <div id="logo-container" class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="images/logo.png" class="w-full h-full object-contain" alt="Logo JS Pisos">
+                </div>
+
+                <span id="header-company-name" class="font-display text-wax-400 text-lg font-bold">JS Pisos</span>
+            </div>
+            <a href="#" id="header-cta-btn"
+                class="bg-wax-500 hover:bg-wax-600 text-wood-900 px-4 py-2 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg">
+                Orçamento
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 wood-pattern">
+        <div class="absolute inset-0 bg-gradient-to-br from-wood-800 via-wood-700 to-wood-900"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="img-placeholder w-full h-full">
+                <img src="images/piso1.webp">.
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
+            <h1 id="hero-title" class="font-display text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+                Transformamos seu ambiente com <span class="text-wax-400">pisos de qualidade</span>
+            </h1>
+            <p id="hero-subtitle" class="text-wood-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Especialistas em pisos laminados, vinílicos, rodapés e restauração de assoalhos.
+                Mais de 10 anos trazendo beleza e durabilidade para sua casa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" id="hero-whatsapp-btn"
+                    class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Falar no WhatsApp
+                </a>
+                <a href="#servicos"
+                    class="border-2 border-wax-400 text-wax-400 hover:bg-wax-400 hover:text-wood-900 px-8 py-4 rounded-full text-lg font-semibold transition-all">
+                    Ver Serviços
+                </a>
+            </div>
+        </div>
+        <!-- Decorative wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="#fdf8f3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-wood-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-wax-600 font-semibold text-sm uppercase tracking-wider">O que fazemos</span>
+                <h2 id="services-title" class="font-display text-3xl md:text-5xl text-wood-800 mt-2">Nossos Serviços
+                </h2>
+                <div class="w-24 h-1 bg-wax-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="fade-up bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="img-placeholder h-48 group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/pisolaminado.webp">.
+                    </div>
+                    <div class="p-6">
+                        <h3 id="service-1" class="font-display text-xl text-wood-800 mb-2">Pisos Laminados</h3>
+                        <p class="text-wood-500 text-sm">Instalação profissional de pisos laminados com acabamento
+                            perfeito e garantia de qualidade.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="fade-up bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    style="transition-delay: 0.1s;">
+                    <div class="img-placeholder h-48 group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/pisovinilico.webp">
+                    </div>
+                    <div class="p-6">
+                        <h3 id="service-2" class="font-display text-xl text-wood-800 mb-2">Pisos Vinílicos</h3>
+                        <p class="text-wood-500 text-sm">Versatilidade e durabilidade com pisos vinílicos de alta
+                            qualidade para todos os ambientes.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="fade-up bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    style="transition-delay: 0.2s;">
+                    <div class="img-placeholder h-48 group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/rodape.webp">
+                    </div>
+                    <div class="p-6">
+                        <h3 id="service-3" class="font-display text-xl text-wood-800 mb-2">Rodapés</h3>
+                        <p class="text-wood-500 text-sm">Acabamento impecável com rodapés que complementam perfeitamente
+                            seu piso.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="fade-up bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    style="transition-delay: 0.3s;">
+                    <div class="img-placeholder h-48 group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/lixa.jpg">
+                    </div>
+                    <div class="p-6">
+                        <h3 id="service-4" class="font-display text-xl text-wood-800 mb-2">Lixação de Assoalhos</h3>
+                        <p class="text-wood-500 text-sm">Restauramos seu assoalho antigo, devolvendo a beleza original
+                            da madeira.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="fade-up bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    style="transition-delay: 0.4s;">
+                    <div class="img-placeholder h-48 group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/sinteko.jpg">
+                    </div>
+                    <div class="p-6">
+                        <h3 id="service-5" class="font-display text-xl text-wood-800 mb-2">Aplicação de Sintekos</h3>
+                        <p class="text-wood-500 text-sm">Proteção e brilho duradouro para seu piso de madeira com
+                            sinteko de alta qualidade.</p>
+                    </div>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="fade-up bg-gradient-to-br from-wood-700 to-wood-900 rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col justify-center items-center text-center"
+                    style="transition-delay: 0.5s;">
+                    <div class="text-wax-400 mb-4">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl text-white mb-2">Precisa de outro serviço?</h3>
+                    <p class="text-wood-200 text-sm mb-4">Entre em contato e conte-nos o que você precisa!</p>
+                    <a href="#" id="services-whatsapp-btn"
+                        class="bg-wax-500 hover:bg-wax-400 text-wood-900 px-6 py-3 rounded-full font-semibold transition-all">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="py-20 bg-wood-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-wax-600 font-semibold text-sm uppercase tracking-wider">Resultados reais</span>
+                <h2 id="before-after-title" class="font-display text-3xl md:text-5xl text-wood-800 mt-2">Antes e Depois
+                </h2>
+                <div class="w-24 h-1 bg-wax-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-wood-500 mt-4 max-w-xl mx-auto">Arraste o controle para ver a transformação</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Before/After 1 -->
+                <div class="fade-up">
+                    <div class="ba-container h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden" data-ba="1">
+                        <div class="ba-after img-placeholder w-full h-full">
+                            <img src="images/depois1.webp">
+                        </div>
+                        <div class="ba-before img-placeholder w-full h-full"
+                            style="background: linear-gradient(135deg, #6b4423 0%, #3d2614 100%);">
+                            <img src="images/antes1.webp">
+                        </div>
+                        <div class="ba-slider"></div>
+                    </div>
+                    <p class="text-center text-wood-600 mt-4 font-medium">Restauração de Assoalho - Sala de Estar</p>
+                </div>
+
+                <!-- Before/After 2 -->
+                <div class="fade-up" style="transition-delay: 0.2s;">
+                    <div class="ba-container h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden" data-ba="2">
+                        <div class="ba-after img-placeholder w-full h-full">
+                            <span>DEPOIS<br>Piso Novo Instalado</span>
+                        </div>
+                        <div class="ba-before img-placeholder w-full h-full"
+                            style="background: linear-gradient(135deg, #6b4423 0%, #3d2614 100%);">
+                            <span>ANTES<br>Piso Antigo</span>
+                        </div>
+                        <div class="ba-slider"></div>
+                    </div>
+                    <p class="text-center text-wood-600 mt-4 font-medium">Instalação de Piso Laminado - Quarto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-wood-800 wood-pattern">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-wax-400 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+                <h2 id="testimonials-title" class="font-display text-3xl md:text-5xl text-white mt-2">O que nossos
+                    clientes dizem</h2>
+                <div class="w-24 h-1 bg-wax-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="carousel-container fade-up">
+                <div class="carousel-track" id="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-slide">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-2 h-full">
+                            <div class="flex items-center gap-1 text-wax-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="text-wood-100 mb-6 italic">"Excelente trabalho! Meu assoalho estava muito
+                                desgastado e agora parece novo. Profissionais muito competentes e pontuais."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-wax-500 flex items-center justify-center text-wood-900 font-bold">
+                                    MC</div>
+                                <div>
+                                    <p class="text-white font-semibold">Maria Clara</p>
+                                    <p class="text-wood-300 text-sm">Florianópolis, SC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-slide">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-2 h-full">
+                            <div class="flex items-center gap-1 text-wax-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="text-wood-100 mb-6 italic">"Instalaram piso laminado em toda minha casa. Ficou
+                                perfeito! O acabamento é impecável e o preço foi justo. Super recomendo!"</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-wax-500 flex items-center justify-center text-wood-900 font-bold">
+                                    RS</div>
+                                <div>
+                                    <p class="text-white font-semibold">Roberto Santos</p>
+                                    <p class="text-wood-300 text-sm">São José, SC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="carousel-slide">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-2 h-full">
+                            <div class="flex items-center gap-1 text-wax-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="text-wood-100 mb-6 italic">"Aplicação de sinteko excelente! A equipe foi muito
+                                profissional e cuidadosa. Meu piso ficou brilhando como nunca."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-wax-500 flex items-center justify-center text-wood-900 font-bold">
+                                    AL</div>
+                                <div>
+                                    <p class="text-white font-semibold">Ana Lucia</p>
+                                    <p class="text-wood-300 text-sm">Palhoça, SC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="carousel-slide">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-2 h-full">
+                            <div class="flex items-center gap-1 text-wax-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                            <p class="text-wood-100 mb-6 italic">"Serviço de primeira qualidade! Instalaram piso
+                                vinílico no meu escritório e ficou lindo. Muito satisfeito com o resultado."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-wax-500 flex items-center justify-center text-wood-900 font-bold">
+                                    PF</div>
+                                <div>
+                                    <p class="text-white font-semibold">Pedro Fernandes</p>
+                                    <p class="text-wood-300 text-sm">Biguaçu, SC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel controls -->
+            <div class="flex justify-center gap-4 mt-8">
+                <button id="prev-btn"
+                    class="w-12 h-12 rounded-full bg-wax-500 hover:bg-wax-400 text-wood-900 flex items-center justify-center transition-all shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next-btn"
+                    class="w-12 h-12 rounded-full bg-wax-500 hover:bg-wax-400 text-wood-900 flex items-center justify-center transition-all shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-wax-500 to-wax-600">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-up">
+            <h2 id="cta-title" class="font-display text-3xl md:text-5xl text-wood-900 mb-6">Solicite seu Orçamento
+                Gratuito</h2>
+            <p id="cta-text" class="text-wood-800 text-lg mb-10 max-w-2xl mx-auto">
+                Entre em contato pelo WhatsApp e receba um orçamento personalizado para seu projeto.
+                Atendemos toda a região da Grande Florianópolis!
+            </p>
+            <a href="#" id="cta-whatsapp-btn"
+                class="inline-flex items-center gap-3 bg-wood-800 hover:bg-wood-900 text-white px-10 py-5 rounded-full text-xl font-semibold transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                (48) 99901-9892
+            </a>
+            <p class="text-wood-700 mt-4 text-sm">Resposta rápida • Orçamento sem compromisso</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wood-900 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center"
+                        style="min-width: 40px;">
+                        <img src="images/logo.png" class="w-full h-full object-contain" alt="Logo JS Pisos">
+                    </div>
+                    <span id="footer-company-name" class="font-display text-wax-400 text-lg font-bold">JS Pisos e
+                        Acabamentos</span>
+                </div>
+                <div class="text-wood-400 text-sm text-center md:text-right">
+                    <p>© 2026 JS Pisos e Acabamentos. Todos os direitos reservados.</p>
+                    <p class="mt-1">Grande Florianópolis, SC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" id="floating-whatsapp"
+        class="whatsapp-btn fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script>
+        // Default configuration
+        const defaultConfig = {
+            company_name: 'JS Pisos e Acabamentos',
+            hero_title: 'Transformamos seu ambiente com <span class="text-wax-400">pisos de qualidade</span>',
+            hero_subtitle: 'Especialistas em pisos laminados, vinílicos, rodapés e restauração de assoalhos. Mais de 10 anos trazendo beleza e durabilidade para sua casa.',
+            services_title: 'Nossos Serviços',
+            service_1_name: 'Pisos Laminados',
+            service_2_name: 'Pisos Vinílicos',
+            service_3_name: 'Rodapés',
+            service_4_name: 'Lixação de Assoalhos',
+            service_5_name: 'Aplicação de Sintekos',
+            before_after_title: 'Antes e Depois',
+            testimonials_title: 'O que nossos clientes dizem',
+            cta_title: 'Solicite seu Orçamento Gratuito',
+            cta_text: 'Entre em contato pelo WhatsApp e receba um orçamento personalizado para seu projeto. Atendemos toda a região da Grande Florianópolis!',
+            whatsapp_number: '5548999019892',
+            background_color: '#fdf8f3',
+            surface_color: '#ffffff',
+            text_color: '#3d2614',
+            primary_action_color: '#d4a017',
+            secondary_action_color: '#8b5a2b'
+        };
+
+        let config = { ...defaultConfig };
+
+        // Update WhatsApp links
+        function updateWhatsAppLinks() {
+            const whatsappUrl = `https://wa.me/${config.whatsapp_number}?text=Olá! Gostaria de solicitar um orçamento.`;
+            document.getElementById('hero-whatsapp-btn').href = whatsappUrl;
+            document.getElementById('services-whatsapp-btn').href = whatsappUrl;
+            document.getElementById('cta-whatsapp-btn').href = whatsappUrl;
+            document.getElementById('floating-whatsapp').href = whatsappUrl;
+            document.getElementById('header-cta-btn').href = whatsappUrl;
+        }
+
+        // Config change handler
+        async function onConfigChange(newConfig) {
+            config = { ...defaultConfig, ...newConfig };
+
+            // Update text content
+            document.getElementById('header-company-name').textContent = config.company_name.split(' ')[0] + ' Pisos';
+            document.getElementById('footer-company-name').textContent = config.company_name;
+            document.getElementById('hero-title').innerHTML = config.hero_title;
+            document.getElementById('hero-subtitle').textContent = config.hero_subtitle;
+            document.getElementById('services-title').textContent = config.services_title;
+            document.getElementById('service-1').textContent = config.service_1_name;
+            document.getElementById('service-2').textContent = config.service_2_name;
+            document.getElementById('service-3').textContent = config.service_3_name;
+            document.getElementById('service-4').textContent = config.service_4_name;
+            document.getElementById('service-5').textContent = config.service_5_name;
+            document.getElementById('before-after-title').textContent = config.before_after_title;
+            document.getElementById('testimonials-title').textContent = config.testimonials_title;
+            document.getElementById('cta-title').textContent = config.cta_title;
+            document.getElementById('cta-text').textContent = config.cta_text;
+
+            // Update colors
+            document.body.style.backgroundColor = config.background_color;
+
+            // Update WhatsApp links
+            updateWhatsAppLinks();
+        }
+
+        // Map to capabilities for color/font editing
+        function mapToCapabilities(cfg) {
+            return {
+                recolorables: [
+                    {
+                        get: () => cfg.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            cfg.background_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.surface_color || defaultConfig.surface_color,
+                        set: (value) => {
+                            cfg.surface_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ surface_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            cfg.text_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.primary_action_color || defaultConfig.primary_action_color,
+                        set: (value) => {
+                            cfg.primary_action_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ primary_action_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color,
+                        set: (value) => {
+                            cfg.secondary_action_color = value;
+                            if (window.elementSdk) window.elementSdk.setConfig({ secondary_action_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        // Map to edit panel values
+        function mapToEditPanelValues(cfg) {
+            return new Map([
+                ['company_name', cfg.company_name || defaultConfig.company_name],
+                ['hero_title', cfg.hero_title || defaultConfig.hero_title],
+                ['hero_subtitle', cfg.hero_subtitle || defaultConfig.hero_subtitle],
+                ['services_title', cfg.services_title || defaultConfig.services_title],
+                ['service_1_name', cfg.service_1_name || defaultConfig.service_1_name],
+                ['service_2_name', cfg.service_2_name || defaultConfig.service_2_name],
+                ['service_3_name', cfg.service_3_name || defaultConfig.service_3_name],
+                ['service_4_name', cfg.service_4_name || defaultConfig.service_4_name],
+                ['service_5_name', cfg.service_5_name || defaultConfig.service_5_name],
+                ['before_after_title', cfg.before_after_title || defaultConfig.before_after_title],
+                ['testimonials_title', cfg.testimonials_title || defaultConfig.testimonials_title],
+                ['cta_title', cfg.cta_title || defaultConfig.cta_title],
+                ['cta_text', cfg.cta_text || defaultConfig.cta_text],
+                ['whatsapp_number', cfg.whatsapp_number || defaultConfig.whatsapp_number]
+            ]);
+        }
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Before/After slider functionality
+        function initBeforeAfter() {
+            const containers = document.querySelectorAll('.ba-container');
+
+            containers.forEach(container => {
+                const slider = container.querySelector('.ba-slider');
+                const before = container.querySelector('.ba-before');
+                let isDragging = false;
+
+                function updateSlider(x) {
+                    const rect = container.getBoundingClientRect();
+                    let percentage = ((x - rect.left) / rect.width) * 100;
+                    percentage = Math.max(0, Math.min(100, percentage));
+
+                    slider.style.left = percentage + '%';
+                    before.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+                }
+
+                container.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    updateSlider(e.clientX);
+                });
+
+                container.addEventListener('touchstart', (e) => {
+                    isDragging = true;
+                    updateSlider(e.touches[0].clientX);
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging) updateSlider(e.clientX);
+                });
+
+                document.addEventListener('touchmove', (e) => {
+                    if (isDragging) updateSlider(e.touches[0].clientX);
+                });
+
+                document.addEventListener('mouseup', () => isDragging = false);
+                document.addEventListener('touchend', () => isDragging = false);
+            });
+        }
+
+        // Testimonial carousel
+        function initCarousel() {
+            const track = document.getElementById('testimonial-track');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slides = track.querySelectorAll('.carousel-slide');
+            let currentIndex = 0;
+
+            function getSlidesPerView() {
+                if (window.innerWidth >= 1024) return 3;
+                if (window.innerWidth >= 768) return 2;
+                return 1;
+            }
+
+            function updateCarousel() {
+                const slidesPerView = getSlidesPerView();
+                const maxIndex = Math.max(0, slides.length - slidesPerView);
+                currentIndex = Math.min(currentIndex, maxIndex);
+                const offset = -(currentIndex * (100 / slidesPerView));
+                track.style.transform = `translateX(${offset}%)`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = Math.max(0, currentIndex - 1);
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                const slidesPerView = getSlidesPerView();
+                const maxIndex = Math.max(0, slides.length - slidesPerView);
+                currentIndex = Math.min(maxIndex, currentIndex + 1);
+                updateCarousel();
+            });
+
+            window.addEventListener('resize', updateCarousel);
+
+            // Auto-play
+            setInterval(() => {
+                const slidesPerView = getSlidesPerView();
+                const maxIndex = Math.max(0, slides.length - slidesPerView);
+                currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+                updateCarousel();
+            }, 5000);
+        }
+
+        // Scroll animations
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        }
+
+        // Initialize everything
+        updateWhatsAppLinks();
+        initBeforeAfter();
+        initCarousel();
+        initScrollAnimations();
+    </script>
+</body>
+
+</html>
